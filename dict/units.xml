@@ -1,0 +1,107 @@
+<GALLON>
+	<IF>
+		<LT>1</LT>
+	<THEN>
+		<CUP>16</CUP>
+	</IF>
+</GALLON>
+
+<QUART>
+	<IF>
+		<GT>0</GT>
+	<THEN>
+		<CUP>4</CUP>
+	</IF>
+</QUART>
+
+<PINT>
+	<IF>
+		<GT>0</GT>
+	<THEN>
+		<CUP>2</CUP>
+	</IF>
+</PINT>
+
+<CUP>
+	<IF>
+		<LT>0.25</LT>
+	<THEN>
+		<TBSP>16</TBSP>
+	<ELIF>
+		<GT>15.9</GT>
+	<THEN>
+		<GALLON>0.0625</GALLON>
+	</IF>
+</CUP>
+
+<FLUID OZ>
+	<IF>
+		<GT>0</GT>
+	<THEN>
+		<TBSP>2</TBSP>
+	</IF>
+</FLUID OZ>
+
+<TBSP>
+	<IF>
+		<LT>1</LT>
+	<THEN>
+		<TSP>3</TSP>
+	<ELIF>
+		<GT>3.9</GT>
+	<THEN>
+		<CUP>0.0625</CUP>
+	</IF>
+</TBSP>
+
+<TSP>
+	<IF>
+		<LT>0.5</LT>
+	<THEN>
+		<DASH>8</DASH>
+	<ELIF>
+		<GT>2.9</GT>
+	<THEN>
+		<TBSP>0.3333</TBSP>
+	</IF>
+</TSP>
+
+<DASH>
+	<IF>
+		<LT>1</LT>
+	<THEN>
+		<PINCH>2</PINCH>
+	<ELIF>
+		<GT>3.9</GT>
+	<THEN>
+		<TSP>0.125</TSP>
+	</IF>
+</DASH>
+
+<PINCH>
+	<IF>
+		<GT>1.9</GT>
+	<THEN>
+		<DASH>0.5</DASH>
+	</IF>
+</PINCH>
+
+<QTY/>
+
+<CLOVE/>
+
+<LB>
+	<IF>
+		<LT>1</LT>
+	<THEN>
+		<OZ>16</OZ>
+	</IF>
+</LB>
+
+<OZ>
+	<IF>
+		<GT>15.9</GT>
+	<THEN>
+		<LB>0.0625</LB>
+	</IF>
+</OZ>
