@@ -88,7 +88,7 @@ definitions = {}
 
 units = {}
 
-servings_multiplier = None
+servings_multiplier = 1
 
 precise = False
 vague = False
@@ -108,7 +108,7 @@ with open(script, "r") as file:
 
 for tag, content in read(txt):
     if tag == "RECIPE":
-        path = f"recipes/{content}.xml"
+        path = content
     elif tag == "SERVINGS":
         servings_multiplier = float(content)
 
@@ -124,6 +124,10 @@ for tag, content in read(txt):
         definitions[before] = after
     elif tag == "VAGUE":
         vague = True
+    else:
+        path = script
+        
+        break
 
 with open(path, "r") as file:
     txt = file.read()
